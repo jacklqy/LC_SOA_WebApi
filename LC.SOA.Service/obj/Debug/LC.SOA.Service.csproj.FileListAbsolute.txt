@@ -1,0 +1,9 @@
+G:\test\LC_SOA_WebApi\LC.SOA.Service\bin\Debug\LC.SOA.Service.dll
+G:\test\LC_SOA_WebApi\LC.SOA.Service\bin\Debug\LC.SOA.Service.pdb
+G:\test\LC_SOA_WebApi\LC.SOA.Service\bin\Debug\LC.SOA.Interface.dll
+G:\test\LC_SOA_WebApi\LC.SOA.Service\bin\Debug\LC.SOA.Interface.pdb
+G:\test\LC_SOA_WebApi\LC.SOA.Service\obj\Debug\LC.SOA.Service.csprojAssemblyReference.cache
+G:\test\LC_SOA_WebApi\LC.SOA.Service\obj\Debug\LC.SOA.Service.csproj.CoreCompileInputs.cache
+G:\test\LC_SOA_WebApi\LC.SOA.Service\obj\Debug\LC.SOA.Service.csproj.CopyComplete
+G:\test\LC_SOA_WebApi\LC.SOA.Service\obj\Debug\LC.SOA.Service.dll
+G:\test\LC_SOA_WebApi\LC.SOA.Service\obj\Debug\LC.SOA.Service.pdb

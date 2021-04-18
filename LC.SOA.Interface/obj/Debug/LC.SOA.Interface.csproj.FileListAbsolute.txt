@@ -1,0 +1,5 @@
+G:\test\LC_SOA_WebApi\LC.SOA.Interface\bin\Debug\LC.SOA.Interface.dll
+G:\test\LC_SOA_WebApi\LC.SOA.Interface\bin\Debug\LC.SOA.Interface.pdb
+G:\test\LC_SOA_WebApi\LC.SOA.Interface\obj\Debug\LC.SOA.Interface.csproj.CoreCompileInputs.cache
+G:\test\LC_SOA_WebApi\LC.SOA.Interface\obj\Debug\LC.SOA.Interface.dll
+G:\test\LC_SOA_WebApi\LC.SOA.Interface\obj\Debug\LC.SOA.Interface.pdb

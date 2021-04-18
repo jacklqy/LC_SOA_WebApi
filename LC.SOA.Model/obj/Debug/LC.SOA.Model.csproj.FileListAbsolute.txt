@@ -1,0 +1,6 @@
+G:\test\LC_SOA_WebApi\LC.SOA.Model\bin\Debug\LC.SOA.Model.dll
+G:\test\LC_SOA_WebApi\LC.SOA.Model\bin\Debug\LC.SOA.Model.pdb
+G:\test\LC_SOA_WebApi\LC.SOA.Model\obj\Debug\LC.SOA.Model.csprojAssemblyReference.cache
+G:\test\LC_SOA_WebApi\LC.SOA.Model\obj\Debug\LC.SOA.Model.csproj.CoreCompileInputs.cache
+G:\test\LC_SOA_WebApi\LC.SOA.Model\obj\Debug\LC.SOA.Model.dll
+G:\test\LC_SOA_WebApi\LC.SOA.Model\obj\Debug\LC.SOA.Model.pdb
