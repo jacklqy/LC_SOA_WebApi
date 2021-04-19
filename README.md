@@ -23,3 +23,4 @@
     /// 10 自动生成WebApi文档：Areas-》HelpPage-》Views-》Help-》Index.cshtml 就是api接口说明文档，框架已经为我们自动生成了一个区域路由来展示。所以只需在浏览器输入：http://localhost:50439/Help/Index 就可以查看到WebApi文档。
     /// 
 
+![image](https://user-images.githubusercontent.com/26539681/115218867-93371300-a139-11eb-9039-03cc5ff3e8c5.png)
