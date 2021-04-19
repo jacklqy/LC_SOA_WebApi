@@ -31,7 +31,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,14 +48,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TbLogService.cs" />
+    <Compile Include="BaseService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tb_DebugLogService.cs" />
+    <Compile Include="Tb_ErrorService.cs" />
+    <Compile Include="Tb_LogService.cs" />
+    <Compile Include="Tb_MqService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LC.SOA.Interface\LC.SOA.Interface.csproj">
       <Project>{d711e4bc-a8e0-447e-bd8e-4f5a71cdda80}</Project>
       <Name>LC.SOA.Interface</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LC.SOA.Model\LC.SOA.Model.csproj">
+      <Project>{4f8f20f2-8f2b-4c8f-8eac-015590cb3c1d}</Project>
+      <Name>LC.SOA.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

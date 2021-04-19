@@ -109,7 +109,7 @@
             $("#btnGet5").on("click", function () {//传递实体 json对象
                 $.ajax({ url: "/api/users/GetUserByModel", type: "get", data: user, success: function (data) { alert(data); }, datatype: "json" });
             });
-            $("#btnGet6").on("click", function () {//传递实体  必须FromUri才能找到
+            $("#btnGet6").on("click", function () {//传递实体  必须FromUri才能赋值给后端实体对象
                 $.ajax({ url: "/api/users/GetUserByModelUri", type: "get", data: user, success: function (data) { alert(data); }, datatype: "json" });
             });
             $("#btnGet7").on("click", function () {//传递实体,序列化后传递
@@ -163,7 +163,7 @@
             });
 
             //delete一样 type换成delete
-            //如果大家还有别的传递和获取 自动绑定好的方式，欢迎分享
+            //如果大家还有别的传递和获取 自动绑定好的方式，欢迎分享...
 
             $("#btnLogin").on("click", function () {
                 $.ajax({
@@ -185,10 +185,10 @@
 
             var ticket = "";//登陆后放在某个html里面，ajax都得带上
 
-
+            //跨域请求
             //microsoft.aspnet.webapi.cors
-            jQuery.support.cors = true;
-            var location = "http://localhost:9008";
+            jQuery.support.cors = true;//跨域请求时，需要设置一下
+            var location = "http://localhost:9008";//请求不同的域名api
             $("#btnGetCors1").on("click", function () {
                 $.ajax({ url: location + "/api/users/GetUserByID", type: "get", data: { "id": 1 }, success: function (data) { alert(data); }, datatype: "json" });
             });

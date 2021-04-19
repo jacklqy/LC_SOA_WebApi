@@ -11,17 +11,24 @@ using System.Net;
 using System.Net.Http;
 using System.Web;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Security;
 using Unity;
 
+/// <summary>
+/// 4 WebApi前台调用详析
+/// 6 Basic授权认证&权限Filter
+/// </summary>
 namespace LC_WebApi.Controllers
 {
+    //[BasicAuthorizeAttribute]//控制器里面的全部方法都进行权限验证
+    //[ExceptionFilterAttribute]//控制器里面的全部方法都进行异常驳回
     public class UsersController : ApiController
     {
-        private readonly ITbLogService _iTbLogService = null;
-        public UsersController(ITbLogService tbLogService)
+        private readonly ITb_LogService _iTb_LogService = null;
+        public UsersController(ITb_LogService tb_LogService)
         {
-            _iTbLogService = tbLogService;
+            _iTb_LogService = tb_LogService;
         }
 
         /// <summary>
@@ -35,12 +42,14 @@ namespace LC_WebApi.Controllers
         };
 
         #region 用户登陆
-        [CustomAllowAnonymousAttribute]
+        //[AllowAnonymous] //允许匿名访问，无效权限认证--框架提供
+        [Utility.Filters.AllowAnonymousAttribute]//自定义的
         [HttpGet]
         public string Login(string account, string password)
         {
             if ("Admin".Equals(account) && "123456".Equals(password))//应该数据库校验
             {
+                //.net框架提供-》支持设置失效时间等...
                 FormsAuthenticationTicket ticketObject = new FormsAuthenticationTicket(0, account, DateTime.Now, DateTime.Now.AddHours(1), true, string.Format("{0}&{1}", account, password), FormsAuthentication.FormsCookiePath);
                 var result = new
                 {
@@ -60,17 +69,19 @@ namespace LC_WebApi.Controllers
         #region HttpGet
         // GET api/Users
         [HttpGet]
+        //[ExceptionFilterAttribute]//异常捕获特性
+        [ActionFilterAttribute]
         public IEnumerable<Users> Get()
         {
+            throw new Exception();//异常捕获测试
             return _userList;
         }
 
         // GET api/Users/5
         [HttpGet]
-
         //[AllowAnonymous]
-        //[EnableCors(origins: "http://localhost:9008/", headers: "*", methods: "GET,POST,PUT,DELETE")]
-        //[CustomBasicAuthorizeAttribute]//方法注册
+        [EnableCors(origins: "http://localhost:9008/", headers: "*", methods: "GET,POST,PUT,DELETE")]//此方法支持跨域请求
+        //[BasicAuthorizeAttribute]//方法调用前权限认证
         public Users GetUserByID(int id)
         {
             string idParam = HttpContext.Current.Request.QueryString["id"];
@@ -78,14 +89,14 @@ namespace LC_WebApi.Controllers
             var user = _userList.FirstOrDefault(users => users.UserID == id);
             if (user == null)
             {
-                throw new HttpResponseException(HttpStatusCode.NotFound);
+                throw new HttpResponseException(HttpStatusCode.NotFound);//异常处理
             }
             return user;
         }
 
         //GET api/Users/?username=xx
         [HttpGet]
-        [CustomBasicAuthorizeAttribute]
+        //[BasicAuthorizeAttribute]//方法调用前权限认证
         public IEnumerable<Users> GetUserByName(string userName)
         {
             string userNameParam = HttpContext.Current.Request.QueryString["userName"];
@@ -102,7 +113,11 @@ namespace LC_WebApi.Controllers
 
             return _userList.Where(p => string.Equals(p.UserName, userName, StringComparison.OrdinalIgnoreCase));
         }
-
+        /// <summary>
+        /// user实体null，因为没有加[FromUri]
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         [HttpGet]
         public IEnumerable<Users> GetUserByModel(Users user)
         {
@@ -112,7 +127,11 @@ namespace LC_WebApi.Controllers
 
             return _userList;
         }
-
+        /// <summary>
+        /// 加了[FromUri]表示从地址获取，这样就能将值赋值给实体对象（通用做法）
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         [HttpGet]
         public IEnumerable<Users> GetUserByModelUri([FromUri] Users user)
         {
@@ -122,7 +141,11 @@ namespace LC_WebApi.Controllers
 
             return _userList;
         }
-
+        /// <summary>
+        /// 获取前端传递的序列化的字符串，然后后端在反序列化为实体对象（不是通用做法）
+        /// </summary>
+        /// <param name="userString"></param>
+        /// <returns></returns>
         [HttpGet]
         public IEnumerable<Users> GetUserByModelSerialize(string userString)
         {
@@ -188,7 +211,7 @@ namespace LC_WebApi.Controllers
 
         //POST api/Users/RegisterUser
         [HttpPost]
-        public Users RegisterUser(Users user)//可以来自FromBody   FromUri
+        public Users RegisterUser(Users user)//可以来自FromBody   FromUri，但是默认优先FromBody
         {
             string idParam = HttpContext.Current.Request.Form["UserID"];
             string nameParam = HttpContext.Current.Request.Form["UserName"];

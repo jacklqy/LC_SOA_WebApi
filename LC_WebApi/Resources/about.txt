@@ -1,0 +1,7 @@
+1 WebApi前台调用详析
+2 WebApi后台调用详析
+3 Basic授权认证&权限Filter
+
+
+1，dynamic动态传参还能不能用，怎么验证dynamic动态传参的值是否正确（比如int不能赋值成字符串）
+2.[FromBody]和[FromForm]有什么区别

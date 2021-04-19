@@ -41,8 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ITbLogService.cs" />
+    <Compile Include="IBaseService.cs" />
+    <Compile Include="ITb_DebugLogService.cs" />
+    <Compile Include="ITb_ErrorService.cs" />
+    <Compile Include="ITb_LogService.cs" />
+    <Compile Include="ITb_MqService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LC.SOA.Model\LC.SOA.Model.csproj">
+      <Project>{4f8f20f2-8f2b-4c8f-8eac-015590cb3c1d}</Project>
+      <Name>LC.SOA.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

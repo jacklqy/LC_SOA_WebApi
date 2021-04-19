@@ -3,3 +3,16 @@ G:\test\LC_SOA_WebApi\LC.SOA.Interface\bin\Debug\LC.SOA.Interface.pdb
 G:\test\LC_SOA_WebApi\LC.SOA.Interface\obj\Debug\LC.SOA.Interface.csproj.CoreCompileInputs.cache
 G:\test\LC_SOA_WebApi\LC.SOA.Interface\obj\Debug\LC.SOA.Interface.dll
 G:\test\LC_SOA_WebApi\LC.SOA.Interface\obj\Debug\LC.SOA.Interface.pdb
+D:\github\LC_SOA_WebApi\LC.SOA.Interface\bin\Debug\LC.SOA.Interface.dll
+D:\github\LC_SOA_WebApi\LC.SOA.Interface\bin\Debug\LC.SOA.Interface.pdb
+D:\github\LC_SOA_WebApi\LC.SOA.Interface\obj\Debug\LC.SOA.Interface.csproj.CoreCompileInputs.cache
+D:\github\LC_SOA_WebApi\LC.SOA.Interface\obj\Debug\LC.SOA.Interface.dll
+D:\github\LC_SOA_WebApi\LC.SOA.Interface\obj\Debug\LC.SOA.Interface.pdb
+D:\github\LC_SOA_WebApi\LC.SOA.Interface\obj\Debug\LC.SOA.Interface.csprojAssemblyReference.cache
+D:\github\LC_SOA_WebApi\LC.SOA.Interface\bin\Debug\LC.SOA.Model.dll
+D:\github\LC_SOA_WebApi\LC.SOA.Interface\bin\Debug\EntityFramework.dll
+D:\github\LC_SOA_WebApi\LC.SOA.Interface\bin\Debug\LC.SOA.Model.pdb
+D:\github\LC_SOA_WebApi\LC.SOA.Interface\bin\Debug\LC.SOA.Model.dll.config
+D:\github\LC_SOA_WebApi\LC.SOA.Interface\bin\Debug\EntityFramework.xml
+D:\github\LC_SOA_WebApi\LC.SOA.Interface\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\github\LC_SOA_WebApi\LC.SOA.Interface\obj\Debug\LC.SOA.Interface.csproj.CopyComplete

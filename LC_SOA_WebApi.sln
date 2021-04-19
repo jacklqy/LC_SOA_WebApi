@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LC.SOA.Service", "LC.SOA.Se
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LC.SOA.Model", "LC.SOA.Model\LC.SOA.Model.csproj", "{4F8F20F2-8F2B-4C8F-8EAC-015590CB3C1D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestWebApi", "UnitTestWebApi\UnitTestWebApi.csproj", "{FB03F00F-CF87-4F2A-A02A-9B86198A2C7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiSelf", "WebApiSelf\WebApiSelf.csproj", "{542A837D-6463-428D-827D-84AAB33F3D0E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{4F8F20F2-8F2B-4C8F-8EAC-015590CB3C1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F8F20F2-8F2B-4C8F-8EAC-015590CB3C1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F8F20F2-8F2B-4C8F-8EAC-015590CB3C1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB03F00F-CF87-4F2A-A02A-9B86198A2C7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB03F00F-CF87-4F2A-A02A-9B86198A2C7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB03F00F-CF87-4F2A-A02A-9B86198A2C7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB03F00F-CF87-4F2A-A02A-9B86198A2C7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{542A837D-6463-428D-827D-84AAB33F3D0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{542A837D-6463-428D-827D-84AAB33F3D0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{542A837D-6463-428D-827D-84AAB33F3D0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{542A837D-6463-428D-827D-84AAB33F3D0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
